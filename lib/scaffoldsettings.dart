@@ -4,15 +4,6 @@ import 'package:quizzapp/myhomepage.dart';
 import 'package:quizzapp/screen_questions.dart';
 import 'package:quizzapp/screen_result.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const ScaffoldSettings();
-  }
-}
-
 class ScaffoldSettings extends StatefulWidget {
   const ScaffoldSettings({super.key});
 
@@ -39,6 +30,13 @@ class _ScaffoldSettingsState extends State<ScaffoldSettings> {
     }
   }
 
+  void restartQuizz() {
+    setState(() {
+      answewrList = [];
+      activeScreen = 'question-screen';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget screenWidget = WelcomeScreen(switchScreen);
@@ -50,9 +48,15 @@ class _ScaffoldSettingsState extends State<ScaffoldSettings> {
     }
 
     if (activeScreen == 'Result-screen') {
-      screenWidget = ResultScreen(choosenAnswers: answewrList);
+      screenWidget = ResultScreen(
+        choosenAnswers: answewrList,
+        onRestartQuizz: restartQuizz,
+      );
     }
+
+    if (activeScreen == 'q') {}
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(

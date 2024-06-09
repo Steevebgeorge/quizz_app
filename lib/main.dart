@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ScaffoldSettings(),
+      title: "quizz app",
+      debugShowCheckedModeBanner: false, // Ensure this is set to false
+      home: ScaffoldSettings(), // Pass the correct widget here
     );
   }
 }

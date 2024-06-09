@@ -55,4 +55,40 @@ const listquestions = [
       "Eid",
     ],
   ),
+  QuestionClass(
+    "What is the capital of India?",
+    [
+      "New Delhi",
+      "Chennai",
+      "Mumbai",
+      "Kolkata",
+    ],
+  ),
+  QuestionClass(
+    "Which monument is known as the symbol of love and is located in Agra, India?",
+    [
+      "Taj Mahal",
+      "Qutub Minar",
+      "Lotus Temple",
+      "Red Fort",
+    ],
+  ),
+  QuestionClass(
+    "Name the highest peak in India.",
+    [
+      "Kangchenjunga",
+      "Mount Everest",
+      "Annapurna",
+      "K2",
+    ],
+  ),
+  QuestionClass(
+    "Which state in India is known for its backwaters?",
+    [
+      "Kerala",
+      "Gujarat",
+      "Tamil Nadu",
+      "Odisha",
+    ],
+  ),
 ];
